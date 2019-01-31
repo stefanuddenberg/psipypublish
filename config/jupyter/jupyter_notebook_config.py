@@ -95,6 +95,14 @@ c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManager"
 # Always pair ipynb notebooks to md files
 c.ContentsManager.default_jupytext_formats = "ipynb,md"
 
+# Keep all metadata in md file
+c.ContentsManager.default_notebook_metadata_filter = "all"
+c.ContentsManager.default_cell_metadata_filter = "all"
+
+# Remove all metadata from md file
+# c.ContentsManager.default_notebook_metadata_filter = "-all"
+# c.ContentsManager.default_cell_metadata_filter = "-all"
+
 # XXX Use the percent format when saving as py XXX
 # c.ContentsManager.preferred_jupytext_formats_save = "py:percent"
 
