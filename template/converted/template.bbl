@@ -1,0 +1,33 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Uddenberg%
+\ \BBA {} Scholl%
+}{%
+Uddenberg%
+\ \BBA {} Scholl%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+uddenbergTelefaceSerialReproduction2018}
+\APACinsertmetastar {%
+uddenbergTelefaceSerialReproduction2018}%
+\begin{APACrefauthors}%
+Uddenberg, S.%
+\BCBT {}\ \BBA {} Scholl, B\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Teleface: {{Serial}} Reproduction of Faces Reveals a
+  Whiteward Bias in Race Memory} {Teleface: {{Serial}} reproduction of faces
+  reveals a whiteward bias in race memory}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Experimental Psychology:
+  General}{147}{10}{1466-1487}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/xge0000446} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
