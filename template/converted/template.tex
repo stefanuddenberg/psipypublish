@@ -467,9 +467,18 @@ embed figures, code, tables, and more. References are managed using
 BibTex}. For now, you're going to want to edit the notebook's metadata
 in order to change what appears on the title page. In addition, the
 metadata includes \texttt{jupytext} configuration, so that you can
-automatically generate a markdown version of this notebook on saving
--\/- assuming you have \texttt{jupytext} installed and correctly
-configured, that is!
+automatically generate markdown and py:percent versions of this notebook
+automatically on saving -\/- assuming you have \texttt{jupytext}
+installed and correctly configured, that is!
+
+\subsection{Configuration}\label{configuration}
+
+My working configuration files for Jupyter (with Jupytext) and
+iPyPublish can be found in this repository. Naturally, you will need to
+replace your computer's original versions of these files with the new
+ones included here. For example, if using Anaconda, your iPyPublish
+installation can be found at
+\texttt{your\_environment\_name/Lib/site-packages/ipypublish} .
 
 \section{Notes}\label{notes}
 
@@ -478,7 +487,9 @@ configured, that is!
 Produce a notebook in the terminal with the command
 \texttt{nbpublish\ -pdf\ -pbug\ file\_name.ipynb} \footnote{\hphantom{}
   Technically \texttt{-pbug} is optional so you can see verbose output,
-  but nbpublish seems to work more reliably with this option enabled.}
+  but nbpublish seems to work more reliably with this option enabled.}.
+Outputs to \texttt{converted} folder at the \texttt{.ipynb} file's
+location.
 
 \subsection{Markdown}\label{markdown}
 
@@ -548,6 +559,17 @@ Naturally, this won't appear in a PDF export.
   metadata to the correct bibliography file. \emph{Leave out the
   \texttt{.bib} extension from this file name!} It should look like
   \texttt{path/to/bibFileName} .
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If nbpublish is having problems finding the \texttt{.bib} file, I
+    have had success by placing a copy in the
+    \texttt{converted/notebook\_name\_files/} directory, as well as
+    placing the file in the same folder as the actual notebook. This
+    makes set up for the notebook's bibliography metadata especially
+    easy.
+  \end{itemize}
 \item
   Citations can be input with citation keys and standard latex commands
   (e.g., \texttt{\textbackslash{}cite\{citationKey\}}).

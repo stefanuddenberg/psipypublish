@@ -112,14 +112,17 @@ from IPython.display import SVG, display
 
 # %% [markdown]
 # # Introduction
-# This is a template for an APA-style [iPyPublish](https://github.com/chrisjsewell/ipypublish) manuscript. Feel free to check out the documentation and examples at that link; it's all very good. There you can find information on how to embed figures, code, tables, and more. References are managed using [Zotero](https://www.zotero.org/) in concert with [Better BibTex](https://github.com/retorquere/zotero-better-bibtex/). For now, you're going to want to edit the notebook's metadata in order to change what appears on the title page. In addition, the metadata includes `jupytext` configuration, so that you can automatically generate a markdown version of this notebook on saving -- assuming you have `jupytext` installed and correctly configured, that is!  
+# This is a template for an APA-style [iPyPublish](https://github.com/chrisjsewell/ipypublish) manuscript. Feel free to check out the documentation and examples at that link; it's all very good. There you can find information on how to embed figures, code, tables, and more. References are managed using [Zotero](https://www.zotero.org/) in concert with [Better BibTex](https://github.com/retorquere/zotero-better-bibtex/). For now, you're going to want to edit the notebook's metadata in order to change what appears on the title page. In addition, the metadata includes `jupytext` configuration, so that you can automatically generate markdown and py:percent versions of this notebook automatically on saving -- assuming you have `jupytext` installed and correctly configured, that is! 
+#
+# ## Configuration
+# My working configuration files for Jupyter (with Jupytext) and iPyPublish can be found in this repository. Naturally, you will need to replace your computer's original versions of these files with the new ones included here. For example, if using Anaconda, your iPyPublish installation can be found at `your_environment_name/Lib/site-packages/ipypublish` .
 
 # %% [markdown]
 # # Notes
 
 # %% [markdown]
 # ## Production
-# Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_name.ipynb` [^1]
+# Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_name.ipynb` [^1]. Outputs to `converted` folder at the `.ipynb` file's location.
 #
 # [^1]: \hphantom{} Technically `-pbug` is optional so you can see verbose output, but nbpublish seems to work more reliably with this option enabled.
 
@@ -153,7 +156,8 @@ from IPython.display import SVG, display
 
 # %% [markdown]
 # ## Citations and References
-# - First, specify the `bibliography` entry in the notebook metadata to the correct bibliography file. _Leave out the `.bib` extension from this file name!_ It should look like `path/to/bibFileName` .
+# - First, specify the `bibliography` entry in the notebook metadata to the correct bibliography file (Edit --> Edit Notebook Metadata). _Leave out the `.bib` extension from this file name!_ It should look like `path/to/bibFileName` .
+#     - If nbpublish is having problems finding the `.bib` file, I have had success by placing a copy in the `converted/notebook_name_files/` directory, as well as placing the file in the same folder as the actual notebook. This makes set up for the notebook's bibliography metadata especially easy.
 # - Citations can be input with citation keys and standard latex commands (e.g., `\cite{citationKey}`).
 # - I've had success with citation keys generated via Zotero Better BibTex, like so \citep{uddenbergTelefaceSerialReproduction2018}. Note that you won't see the final formatted output until you run `nbpublish`.
 # - See a [cheat sheet of valid cite commands here](http://merkel.texture.rocks/Latex/natbib.php).
@@ -161,7 +165,7 @@ from IPython.display import SVG, display
 # %% [markdown]
 # ## Figures
 # - Figures can be displayed with commands like `display(SVG("filename.svg"))` or `Image('filename.jpg', height=400)`.
-# - Edit the cell's metadata to change the figure caption, placement, size, et al.
+# - Edit the cell's metadata to change the figure caption, placement, size, et al. (View --> Cell Toolbar --> Edit Metadata --> Click on "Edit Metadata" above cell.)
 # - They can be linked in markdown via `\cref{fig:figNameFromMetadata}`
 
 # %% {"ipub": {"figure": {"caption": "An example beeswarm plot of Seaborn's built-in 'tips' dataset.", "height": 0.4, "label": "fig:example", "placement": "H", "widefigure": false}}}
