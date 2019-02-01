@@ -377,7 +377,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 	\clearscrheadfoot{}
 
     % Running head in header
-        \ihead{Psipypublish}
+        \ihead{PsiPyPublish}
 
     % Footer
 	\ifoot{\leftmark}
@@ -410,7 +410,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 
 	\vspace*{1cm}
 
-	\Huge\textbf{Psipypublish: An IPyPublish Template for Psychological Research}
+	\Huge\textbf{PsiPyPublish: An IPyPublish Template for Psychological Research}
 
 	\vspace{0.8cm}
 
@@ -419,7 +419,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 		  \LARGE{Princeton University}\\
 
 	\begin{flushleft} \large\vspace{1.2cm}
-		\emph{Running head:} Psipypublish
+		\emph{Running head:} PsiPyPublish
 	\end{flushleft}
 
 	\begin{flushleft} \large\emph{Address for correspondence:} \\
@@ -530,7 +530,11 @@ location.
   \tightlist
   \item
     Place it between 3 backticks (with an optional language name) and
-    you get (syntax-highlighted) block code. \texttt{python\ \ print(i)}
+    you get (syntax-highlighted) block code.\footnote{Note, however,
+      that one should not use this for displaying large chunks of code
+      in an nbpublish PDF. Instead, see code cell \cref{code:publish}
+      below for an example of how to place code in the PDF}
+    \texttt{python\ print(foo)}
   \end{itemize}
 \item
   \emph{Italic}, \textbf{bold}, and \textbf{\emph{bolded italic}} text
@@ -556,9 +560,10 @@ Naturally, this won't appear in a PDF export.
 \tightlist
 \item
   First, specify the \texttt{bibliography} entry in the notebook
-  metadata to the correct bibliography file. \emph{Leave out the
-  \texttt{.bib} extension from this file name!} It should look like
-  \texttt{path/to/bibFileName} .
+  metadata to the correct bibliography file (Edit -\/-\textgreater{}
+  Edit Notebook Metadata). \emph{Leave out the \texttt{.bib} extension
+  from this file name!} It should look like \texttt{path/to/bibFileName}
+  .
 
   \begin{itemize}
   \tightlist
@@ -593,7 +598,8 @@ Naturally, this won't appear in a PDF export.
   \texttt{Image(\textquotesingle{}filename.jpg\textquotesingle{},\ height=400)}.
 \item
   Edit the cell's metadata to change the figure caption, placement,
-  size, et al.
+  size, et al. (View -\/-\textgreater{} Cell Toolbar -\/-\textgreater{}
+  Edit Metadata -\/-\textgreater{} Click on "Edit Metadata" above cell.)
 \item
   They can be linked in markdown via
   \texttt{\textbackslash{}cref\{fig:figNameFromMetadata\}}

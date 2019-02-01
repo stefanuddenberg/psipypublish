@@ -9,4 +9,4 @@
 \contentsline {subsection}{\numberline {2.6}Templating --- Pass Variables into Markdown}{6}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Latex}{6}{subsection.2.7}
 \contentsline {subsection}{\numberline {2.8}Terminal commands}{6}{subsection.2.8}
-\contentsline {section}{\numberline {3}References}{7}{section.3}
+\contentsline {section}{\numberline {3}References}{8}{section.3}

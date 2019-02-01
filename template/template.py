@@ -20,10 +20,10 @@
 #       institution:
 #       - Princeton University
 #       logo: princeton_logo.pdf
-#       running_head: Psipypublish
+#       running_head: PsiPyPublish
 #       subtitle: ''
 #       tagline: ''
-#       title: 'Psipypublish: An IPyPublish Template for Psychological Research'
+#       title: 'PsiPyPublish: An IPyPublish Template for Psychological Research'
 #       version: Template file -- not for submission
 #       word_count: XXX (Main text + abstract)
 #     toc: true
@@ -108,7 +108,7 @@ from IPython.display import SVG, display
 # from ipypublish.scripts.ipynb_latex_setup import *
 
 # %% [markdown]
-# \renewcommand{\baselinestretch}{1.25} % make PDF's line spacing a little roomier
+# \renewcommand{\baselinestretch}{1.5} % make PDF's line spacing a little roomier
 
 # %% [markdown]
 # # Introduction
@@ -136,15 +136,16 @@ from IPython.display import SVG, display
 #     - Correct formatting only appears after running `nbpublish`.
 # - [Links](https://google.com) can be generated with the following syntax: `[link](http://www.website.com)`
 # - `Code` can be placed between backticks (the character to the left of the `1` key at the top of your keyboard).
-#     - Place it between 3 backticks (with an optional language name) and you get (syntax-highlighted) block code. 
-#     ```python 
-#     print(i)```
+#     - Place it between 3 backticks (with an optional language name) and you get (syntax-highlighted) block code.[^3]
+#     ```python
+#     print(foo)```
 # - *Italic*, __bold__, and ***bolded italic*** text can be created by sandwiching text between 1, 2, or 3 `*`s or `_`s respectively.
 # - > Blockquotes are made by prefacing text with `>` .
 #
 # \todo[inline]{Get inline todos with Latex's "todo" command.}
 #
 # [^2]: \hphantom{} Footnote content goes here!
+# [^3]:Note, however, that one should not use this for displaying large chunks of code in an nbpublish PDF. Instead, see code cell \cref{code:publish} below for an example of how to place code in the PDF
 
 # %% [markdown]
 # ## Embed HTML, including video
