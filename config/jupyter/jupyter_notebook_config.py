@@ -93,7 +93,10 @@ c.Exporter.preprocessors = ["pre_pymarkdown.PyMarkdownPreprocessor"]
 c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManager"
 
 # Always pair ipynb notebooks to md files
-c.ContentsManager.default_jupytext_formats = "ipynb,md"
+c.ContentsManager.default_jupytext_formats = "ipynb,md,py"
+
+# Use the percent format when saving as py
+c.ContentsManager.preferred_jupytext_formats_save = "py:percent"
 
 # Keep all metadata in md file
 c.ContentsManager.default_notebook_metadata_filter = "all"
@@ -102,9 +105,6 @@ c.ContentsManager.default_cell_metadata_filter = "all"
 # Remove all metadata from md file
 # c.ContentsManager.default_notebook_metadata_filter = "-all"
 # c.ContentsManager.default_cell_metadata_filter = "-all"
-
-# XXX Use the percent format when saving as py XXX
-# c.ContentsManager.preferred_jupytext_formats_save = "py:percent"
 
 ## Extra keyword arguments to pass to `set_secure_cookie`. See tornado's
 #  set_secure_cookie docs for details.

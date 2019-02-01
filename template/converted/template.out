@@ -1,3 +1,11 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Notes}{}% 2
-\BOOKMARK [1][-]{section.3}{References}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Production}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Markdown}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Embed HTML, including video}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Citations and References}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Figures}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Templating \204 Pass Variables into Markdown}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Latex}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.8}{Terminal commands}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{References}{}% 11

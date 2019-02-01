@@ -410,7 +410,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 
 	\vspace*{1cm}
 
-	\Huge\textbf{Psipypublish: An Ipypublish Template for Psychological Research}
+	\Huge\textbf{Psipypublish: An IPyPublish Template for Psychological Research}
 
 	\vspace{0.8cm}
 
@@ -425,7 +425,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 	\begin{flushleft} \large\emph{Address for correspondence:} \\
 			Stefan Uddenberg\\
 			Peretsman Scully Hall 322\\
-			Department of Psychology, Princeton University\\
+			Princeton University\\
 			Princeton, NJ 08540\\
 			stefanu@princeton.edu\\
 	\end{flushleft}
@@ -473,54 +473,159 @@ configured, that is!
 
 \section{Notes}\label{notes}
 
+\subsection{Production}\label{production}
+
+Produce a notebook in the terminal with the command
+\texttt{nbpublish\ -pdf\ -pbug\ file\_name.ipynb} \footnote{\hphantom{}
+  Technically \texttt{-pbug} is optional so you can see verbose output,
+  but nbpublish seems to work more reliably with this option enabled.}
+
+\subsection{Markdown}\label{markdown}
+
+\begin{itemize}
+\item
+  Headings and sub-headings (and so on) are made by prefacing text with
+  \texttt{\#}. The more \texttt{\#}s, the greater the level of heading.
+\item
+  Unordered lists are made by prefacing text with a "-".
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Numbered lists start with a number and dot.
+  \item
+    Create sublists via tabbed indentation.
+  \end{enumerate}
+\item
+  Footnote links are made with \texttt{{[}\^{}X{]}} (where \texttt{X} is
+  some number). Footnote content is placed below with
+  \texttt{{[}\^{}X{]}:\ Content\ goes\ here}. Here's an
+  example.\footnote{\hphantom{} Footnote content goes here!}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Correct formatting only appears after running \texttt{nbpublish}.
+  \end{itemize}
+\item
+  \href{https://google.com}{Links} can be generated with the following
+  syntax: \texttt{{[}link{]}(http://www.website.com)}
+\item
+  \texttt{Code} can be placed between backticks (the character to the
+  left of the \texttt{1} key at the top of your keyboard).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Place it between 3 backticks (with an optional language name) and
+    you get (syntax-highlighted) block code. \texttt{python\ \ print(i)}
+  \end{itemize}
+\item
+  \emph{Italic}, \textbf{bold}, and \textbf{\emph{bolded italic}} text
+  can be created by sandwiching text between 1, 2, or 3 \texttt{*}s or
+  \texttt{\_}s respectively.
+\item
+  \begin{quote}
+  Blockquotes are made by prefacing text with \texttt{\textgreater{}} .
+  \end{quote}
+\end{itemize}
+
+\todo[inline]{Get inline todos with Latex's "todo" command.}
+
+\subsection{Embed HTML, including
+video}\label{embed-html-including-video}
+
+HTML embedding is accomplished via the \texttt{\%\%HTML} cell magic.
+Naturally, this won't appear in a PDF export.
+
+\subsection{Citations and References}\label{citations-and-references}
+
 \begin{itemize}
 \tightlist
 \item
-  Produce a notebook in the terminal with the command
-  \texttt{nbpublish\ -pdf\ file\_name.ipynb}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Use \texttt{-pbug} to see verbose output and more informative error
-    messages.
-  \end{itemize}
+  First, specify the \texttt{bibliography} entry in the notebook
+  metadata to the correct bibliography file. \emph{Leave out the
+  \texttt{.bib} extension from this file name!} It should look like
+  \texttt{path/to/bibFileName} .
 \item
-  Figures can be displayed with \texttt{display(SVG("filename.svg"))}.
+  Citations can be input with citation keys and standard latex commands
+  (e.g., \texttt{\textbackslash{}cite\{citationKey\}}).
+\item
+  I've had success with citation keys generated via Zotero Better
+  BibTex, like so \citep{uddenbergTelefaceSerialReproduction2018}. Note
+  that you won't see the final formatted output until you run
+  \texttt{nbpublish}.
+\item
+  See a \href{http://merkel.texture.rocks/Latex/natbib.php}{cheat sheet
+  of valid cite commands here}.
+\end{itemize}
+
+\subsection{Figures}\label{figures}
+
+\begin{itemize}
+\tightlist
+\item
+  Figures can be displayed with commands like
+  \texttt{display(SVG("filename.svg"))} or
+  \texttt{Image(\textquotesingle{}filename.jpg\textquotesingle{},\ height=400)}.
+\item
   Edit the cell's metadata to change the figure caption, placement,
   size, et al.
 \item
-  Citations can be generated via Zotero Better BibTex cite keys, like so
-  \citep{uddenbergTelefaceSerialReproduction2018}. It should be
-  formatted correctly when you run \texttt{nbpublish}. Be sure See a
-  \href{http://merkel.texture.rocks/Latex/natbib.php}{cheat sheet of
-  valid cite commands here}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    This only works if you've set the \texttt{bibliography} entry in the
-    notebook metadata to the correct file. \emph{Leave out the
-    \texttt{.bib} extension from this file name!} It should look like
-    \texttt{path/to/bibFileName}
-  \end{itemize}
-\item
-  Pipe valid Python code into markdown directly with two curly braces,
-  \texttt{8}:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Note that the notebook needs to be \texttt{Trusted}; look to the top
-    right to see if it is and simply click on \texttt{Not\ Trusted} to
-    change that.
-  \end{itemize}
-\item
-  Footnotes are made like this.\footnote{Footnote content goes here!}
-  Correct formatting comes at the time of nbpublish-ing.
-\item
-  TODO: Include example figure.
+  They can be linked in markdown via
+  \texttt{\textbackslash{}cref\{fig:figNameFromMetadata\}}
 \end{itemize}
+
+\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.4\paperheight}{template_files/output_10_0.pdf}\end{center}\caption{An example beeswarm plot of Seaborn's built-in 'tips' dataset.}\label{fig:example}
+    \end{figure}
+
+\subsection{Templating --- Pass Variables into
+Markdown}\label{templating-pass-variables-into-markdown}
+
+\begin{itemize}
+\tightlist
+\item
+  Pipe valid Python code into markdown directly by sandwiching it
+  between two curly braces: E.g., 2 + 2 = 4
+\item
+  Note that the notebook needs to be \texttt{Trusted}; look to the top
+  right to see if it is and simply click on \texttt{Not\ Trusted} to
+  change that.
+\end{itemize}
+
+\subsection{Latex}\label{latex}
+
+\begin{itemize}
+\tightlist
+\item
+  Execute arbitrary latex by sandwiching it between dollar signs:
+  \(a = b+c\)
+\item
+  Alternatively, use \texttt{Latex()} command from \texttt{ipypublish}
+  within a code cell.
+\item
+  Latex's \texttt{hphantom} command is useful when you just want a
+  little more horizontal space between items.
+\end{itemize}
+
+\subsection{Terminal commands}\label{terminal-commands}
+
+\begin{itemize}
+\tightlist
+\item
+  Execute terminal commands in Jupyter by prefacing code with \texttt{!}
+  .
+\item
+  For example, you can export this notebook with the following code
+  cell:
+\end{itemize}
+
+\begin{codecell}[H]
+
+    \caption{How to publish this notebook, from within the notebook itself!}\label{code:publish}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+!nbpublish -pdf -pbug template.ipynb
+\end{lstlisting}\end{codecell}
 
 % sort citations by order of first appearance
 \bibliographystyle{apacite} % formerly unsrtnat with natbib
