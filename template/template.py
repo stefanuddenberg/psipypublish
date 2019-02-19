@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # ---
 # jupyter:
-#   celltoolbar: Edit Metadata
 #   hide_input: false
 #   ipub:
 #     bibliography: ExampleBib
@@ -51,14 +50,21 @@
 #     name: python
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
-#     version: 3.6.2
+#     version: 3.6.7
 #   toc:
+#     base_numbering: 1
 #     nav_menu: {}
 #     number_sections: true
 #     sideBar: true
 #     skip_h1_title: false
+#     title_cell: Table of Contents
+#     title_sidebar: Contents
 #     toc_cell: false
-#     toc_position: {}
+#     toc_position:
+#       height: calc(100% - 180px)
+#       left: 10px
+#       top: 150px
+#       width: 234.6px
 #     toc_section_display: block
 #     toc_window_display: true
 #   varInspector:
@@ -90,11 +96,11 @@
 # My default imports for data analysis
 # %reset -f
 # %matplotlib inline
-# %config InlineBackend.figure_format = 'retina' # High-res graphs (rendered irrelevant by svg option below)
-# %config InlineBackend.print_figure_kwargs = {'bbox_inches':'tight'} # No extra white space
-# %config InlineBackend.figure_format = 'svg' # 'png' is default
+# %config InlineBackend.figure_format = "retina" # High-res graphs (rendered irrelevant by svg option below)
+# %config InlineBackend.print_figure_kwargs = {"bbox_inches":"tight"} # No extra white space
+# %config InlineBackend.figure_format = "svg" # 'png' is default
 import warnings
-warnings.filterwarnings('ignore') # Because we are adults
+warnings.filterwarnings("ignore") # Because we are adults
 from IPython.core.debugger import set_trace
 import matplotlib.pyplot as plt
 import numpy as np
@@ -104,8 +110,8 @@ from IPython.display import SVG, display
 
 # ipypublish imports
 # See the imported script for matplotlib overrides
-# Has helpful commands for displaying images as figures
-# from ipypublish.scripts.ipynb_latex_setup import *
+# Has helpful commands and settings for making the final pdf
+from ipypublish.scripts.ipynb_latex_setup import *
 
 # %% [markdown]
 # \renewcommand{\baselinestretch}{1.5} % make PDF's line spacing a little roomier
@@ -113,7 +119,8 @@ from IPython.display import SVG, display
 # %% [markdown]
 # # Introduction
 # This is a template for an APA-style [iPyPublish](https://github.com/chrisjsewell/ipypublish) manuscript. Feel free to check out the documentation and examples at that link; it's all very good. There you can find information on how to embed figures, code, tables, and more. References are managed using [Zotero](https://www.zotero.org/) in concert with [Better BibTex](https://github.com/retorquere/zotero-better-bibtex/). For now, you're going to want to edit the notebook's metadata in order to change what appears on the title page. In addition, the metadata includes `jupytext` configuration, so that you can automatically generate markdown and py:percent versions of this notebook automatically on saving -- assuming you have `jupytext` installed and correctly configured, that is! 
-#
+
+# %% [markdown]
 # ## Configuration
 # My working configuration files for Jupyter (with Jupytext) and iPyPublish can be found in this repository. Naturally, you will need to replace your computer's original versions of these files with the new ones included here. For example, if using Anaconda, your iPyPublish installation can be found at `your_environment_name/Lib/site-packages/ipypublish` .
 
@@ -153,7 +160,7 @@ from IPython.display import SVG, display
 
 # %%
 # %%HTML
-<iframe width='560' height='315' src='https://www.youtube.com/embed/HW29067qVWk' frameborder='0' allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HW29067qVWk" frameborder="0" allowfullscreen></iframe>
 
 # %% [markdown]
 # ## Citations and References
@@ -170,7 +177,7 @@ from IPython.display import SVG, display
 # - They can be linked in markdown via `\cref{fig:figNameFromMetadata}`
 
 # %% {"ipub": {"figure": {"caption": "An example beeswarm plot of Seaborn's built-in 'tips' dataset.", "height": 0.4, "label": "fig:example", "placement": "H", "widefigure": false}}}
-display(SVG('figures/example.svg'))
+display(SVG("figures/example.svg"))
 
 # %% [markdown] {"variables": {"str(2 + 2)": "4"}}
 # ## Templating — Pass Variables into Markdown
@@ -188,5 +195,5 @@ display(SVG('figures/example.svg'))
 # - Execute terminal commands in Jupyter by prefacing code with `!` .
 # - For example, you can export this notebook with the following code cell:
 
-# %% {"ipub": {"code": {"format": {}, "asfloat": true, "caption": "How to publish this notebook, from within the notebook itself!", "label": "code:publish", "widefigure": false, "placement": "H"}}}
+# %% {"ipub": {"code": {"asfloat": true, "caption": "How to publish this notebook, from within the notebook itself!", "format": {}, "label": "code:publish", "placement": "H", "widefigure": false}}}
 !nbpublish -pdf -pbug template.ipynb
