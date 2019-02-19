@@ -151,7 +151,7 @@ from ipypublish.scripts.ipynb_latex_setup import *
 #
 # \todo[inline]{Get inline todos with Latex's "todo" command.}
 #
-# [^2]: \hphantom{} Footnote content goes here!
+# [^2]: \hphantom{} Footnote content goes here!  
 # [^3]: \hphantom{} Note, however, that one should not use this for displaying large chunks of code in an nbpublish PDF. Instead, see code cell \cref{code:publish} below for an example of how to place code in the PDF
 
 # %% [markdown]
