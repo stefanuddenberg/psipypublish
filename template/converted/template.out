@@ -1,12 +1,15 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Configuration}{section.1}% 2
-\BOOKMARK [1][-]{section.2}{Notes}{}% 3
-\BOOKMARK [2][-]{subsection.2.1}{Production}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.2}{Markdown}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.3}{Embed HTML, including video}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.4}{Citations and References}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.5}{Figures}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.6}{Templating \204 Pass Variables into Markdown}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.7}{Latex}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.8}{Terminal commands}{section.2}% 11
-\BOOKMARK [1][-]{section.3}{References}{}% 12
+\BOOKMARK [2][-]{subsection.1.2}{Caveats}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Notes}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Production}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Markdown}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Citations and References}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Figures}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.5}{Displaying Code}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.6}{Templating \204 Pass Variables into Markdown}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.7}{Latex}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.8}{Terminal commands}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.9}{Troubleshooting}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.9.1}{Jupytext}{subsection.2.9}% 14
+\BOOKMARK [1][-]{section.3}{References}{}% 15

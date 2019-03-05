@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # ---
 # jupyter:
+#   celltoolbar: Edit Metadata
 #   hide_input: false
 #   ipub:
 #     bibliography: ExampleBib
@@ -50,15 +51,12 @@
 #     name: python
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
-#     version: 3.6.7
+#     version: 3.7.2
 #   toc:
-#     base_numbering: 1
 #     nav_menu: {}
 #     number_sections: true
 #     sideBar: true
 #     skip_h1_title: false
-#     title_cell: Table of Contents
-#     title_sidebar: Contents
 #     toc_cell: false
 #     toc_position:
 #       height: calc(100% - 180px)
@@ -92,7 +90,7 @@
 #     window_display: false
 # ---
 
-# %% {"collapsed": true}
+# %%
 # My default imports for data analysis
 # %reset -f
 # %matplotlib inline
@@ -106,10 +104,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from IPython.display import SVG, display
+from IPython.display import SVG, display, Latex
+from dfply import *
 
 # ipypublish imports
-# See the imported script for matplotlib overrides
+# See the imported script for changes to matplotlib settings 
 # Has helpful commands and settings for making the final pdf
 from ipypublish.scripts.ipynb_latex_setup import *
 
@@ -122,16 +121,25 @@ from ipypublish.scripts.ipynb_latex_setup import *
 
 # %% [markdown]
 # ## Configuration
-# My working configuration files for Jupyter (with Jupytext) and iPyPublish can be found in this repository. Naturally, you will need to replace your computer's original versions of these files with the new ones included here. For example, if using Anaconda, your iPyPublish installation can be found at `your_environment_name/Lib/site-packages/ipypublish` .
+# My working configuration files for Jupyter (with Jupytext) and iPyPublish can be found in this repository. Naturally, you will need to replace your computer's original versions of these files with the new ones included here. For example, if using Anaconda, your iPyPublish installation can be found at `your_environment_name/Lib/site-packages/ipypublish`.
+#
+# - `biblio_natbib.py`, `doc_article.py`, and `front_pages.py` all live in `your_environment_name\Lib\site-packages\ipypublish\latex\ipypublish`
+# - `ipynb_latex_setup.py` lives in `your_environment_name\Lib\site-packages\ipypublish\scripts`
+# - `latex_ipypublish_main.py` lives in `your_environment_name\Lib\site-packages\ipypublish\export_plugins`
+
+# %% [markdown]
+# ## Caveats
+# Since the creation of this template, `ipypublish` has been upgraded to version 0.9.0. This template was designed to work with version 0.6.7, and suits my needs; as such, it may take some time before I update this guide to deal with the latest version — if any changes are even needed at all, since I haven't had a chance to try out the latest edition.
 
 # %% [markdown]
 # # Notes
 
 # %% [markdown]
 # ## Production
-# Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_name.ipynb` [^1]. Outputs to `converted` folder at the `.ipynb` file's location.
+# Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_name.ipynb` [^1]. Outputs to `converted` folder at the `.ipynb` file's location.[^2]
 #
-# [^1]: \hphantom{} Technically `-pbug` is optional so you can see verbose output, but nbpublish seems to work more reliably with this option enabled.
+# [^1]: \hphantom{} Technically `-pbug` is optional so you can see verbose output, but nbpublish seems to work more reliably with this option enabled.  
+# [^2]: \hphantom{} `nbpublish` requires a lot of different technologies to work together. As such, if a build fails, simply try running the same command once more to see if that fixes the issue before moving on to more intense debugging.
 
 # %% [markdown]
 # ## Markdown
@@ -155,14 +163,6 @@ from ipypublish.scripts.ipynb_latex_setup import *
 # [^3]: \hphantom{} Note, however, that one should not use this for displaying large chunks of code in an nbpublish PDF. Instead, see code cell \cref{code:publish} below for an example of how to place code in the PDF
 
 # %% [markdown]
-# ## Embed HTML, including video
-# HTML embedding is accomplished via the `%%HTML` cell magic. Naturally, this won't appear in a PDF export.
-
-# %%
-# %%HTML
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HW29067qVWk" frameborder="0" allowfullscreen></iframe>
-
-# %% [markdown]
 # ## Citations and References
 # - First, specify the `bibliography` entry in the notebook metadata to the correct bibliography file (Edit --> Edit Notebook Metadata). _Leave out the `.bib` extension from this file name!_ It should look like `path/to/bibFileName` .
 #     - If nbpublish is having problems finding the `.bib` file, I have had success by placing a copy in the `converted/notebook_name_files/` directory, as well as placing the file in the same folder as the actual notebook. This makes set up for the notebook's bibliography metadata especially easy.
@@ -174,14 +174,54 @@ from ipypublish.scripts.ipynb_latex_setup import *
 # ## Figures
 # - Figures can be displayed with commands like `display(SVG("filename.svg"))` or `Image('filename.jpg', height=400)`.
 # - Edit the cell's metadata to change the figure caption, placement, size, et al. (View --> Cell Toolbar --> Edit Metadata --> Click on "Edit Metadata" above cell.)
-# - They can be linked in markdown via `\cref{fig:figNameFromMetadata}`
+# - Figures can be referenced via `\cref{fig:figNameFromMetadata}`. For example: \cref{fig:example}
+# - Here's the metadata for the figure below (so you don't have to inspect it yourself):
+# ```json
+# {
+#   "ipub": {
+#     "figure": {
+#       "caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn.",
+#       "height": 0.4,
+#       "label": "fig:example",
+#       "placement": "H",
+#       "widefigure": false
+#     }
+#   }
+# }
+# ```
 
-# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of Seaborn's built-in 'tips' dataset.", "height": 0.4, "label": "fig:example", "placement": "H", "widefigure": false}}}
+# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn", "height": 0.4, "label": "fig:example", "placement": "H", "widefigure": false}}}
 display(SVG("figures/example.svg"))
+
+# %% [markdown]
+# ## Displaying Code
+
+# %% [markdown]
+# Displaying the code in a code block, as in \cref{code:example_list_comp} can be accomplished by editing the metadata:
+#
+# ```json
+# {
+# "ipub": {
+#   "code": {
+#   "format" : {},
+#     "asfloat": true,
+#     "caption": "Example list comprehension.",
+#     "label": "code:example_list_comp",
+#     "widefigure": false,
+#     "placement": "H"
+#     }
+#   }
+# }
+# ```
+
+# %% {"ipub": {"code": {"format": {}, "asfloat": true, "caption": "Example list comprehension", "label": "code:example_list_comp", "widefigure": false, "placement": "H"}}}
+colors = ["red", "green", "blue"]
+for color in colors:
+    print(color)
 
 # %% [markdown] {"variables": {"str(2 + 2)": "4"}}
 # ## Templating — Pass Variables into Markdown
-# - Pipe valid Python code into markdown directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}
+# - Using the [Python Markdown Extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), you can pipe valid Python code into markdown cells directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}
 # - Note that the notebook needs to be `Trusted`; look to the top right to see if it is and simply click on `Not Trusted` to change that.
 
 # %% [markdown]
@@ -193,7 +233,14 @@ display(SVG("figures/example.svg"))
 # %% [markdown]
 # ## Terminal commands
 # - Execute terminal commands in Jupyter by prefacing code with `!` .
-# - For example, you can export this notebook with the following code cell:
+# - For example, you can export this notebook with the following code cell (uncommented, of course):
 
 # %% {"ipub": {"code": {"asfloat": true, "caption": "How to publish this notebook, from within the notebook itself!", "format": {}, "label": "code:publish", "placement": "H", "widefigure": false}}}
-!nbpublish -pdf -pbug template.ipynb
+# !nbpublish -pdf -pbug template.ipynb
+
+# %% [markdown]
+# ## Troubleshooting
+#
+# ### Jupytext
+# - If saving to `Rmd` format, beware using single quotes within figure caption metadata, since R Markdown uses single quotes for metadata and not double quotes, which creates issues when you want to include apostrophes.
+# - If you are encountering problems opening or even "trusting" a notebook that was previously working fine, simply delete the other non-ipynb representations of the notebook. I encounter this issue most often when synchronizing notebook files via Dropbox.

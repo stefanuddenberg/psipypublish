@@ -478,7 +478,30 @@ iPyPublish can be found in this repository. Naturally, you will need to
 replace your computer's original versions of these files with the new
 ones included here. For example, if using Anaconda, your iPyPublish
 installation can be found at
-\texttt{your\_environment\_name/Lib/site-packages/ipypublish} .
+\texttt{your\_environment\_name/Lib/site-packages/ipypublish}.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{biblio\_natbib.py}, \texttt{doc\_article.py}, and
+  \texttt{front\_pages.py} all live in
+  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}latex\textbackslash{}ipypublish}
+\item
+  \texttt{ipynb\_latex\_setup.py} lives in
+  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}scripts}
+\item
+  \texttt{latex\_ipypublish\_main.py} lives in
+  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}export\_plugins}
+\end{itemize}
+
+\subsection{Caveats}\label{caveats}
+
+Since the creation of this template, \texttt{ipypublish} has been
+upgraded to version 0.9.0. This template was designed to work with
+version 0.6.7, and suits my needs; as such, it may take some time before
+I update this guide to deal with the latest version --- if any changes
+are even needed at all, since I haven't had a chance to try out the
+latest edition.
 
 \section{Notes}\label{notes}
 
@@ -489,7 +512,10 @@ Produce a notebook in the terminal with the command
   Technically \texttt{-pbug} is optional so you can see verbose output,
   but nbpublish seems to work more reliably with this option enabled.}.
 Outputs to \texttt{converted} folder at the \texttt{.ipynb} file's
-location.
+location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
+  different technologies to work together. As such, if a build fails,
+  simply try running the same command once more to see if that fixes the
+  issue before moving on to more intense debugging.}
 
 \subsection{Markdown}\label{markdown}
 
@@ -548,12 +574,6 @@ location.
 
 \todo[inline]{Get inline todos with Latex's "todo" command.}
 
-\subsection{Embed HTML, including
-video}\label{embed-html-including-video}
-
-HTML embedding is accomplished via the \texttt{\%\%HTML} cell magic.
-Naturally, this won't appear in a PDF export.
-
 \subsection{Citations and References}\label{citations-and-references}
 
 \begin{itemize}
@@ -591,7 +611,6 @@ Naturally, this won't appear in a PDF export.
 \subsection{Figures}\label{figures}
 
 \begin{itemize}
-\tightlist
 \item
   Figures can be displayed with commands like
   \texttt{display(SVG("filename.svg"))} or
@@ -601,12 +620,59 @@ Naturally, this won't appear in a PDF export.
   size, et al. (View -\/-\textgreater{} Cell Toolbar -\/-\textgreater{}
   Edit Metadata -\/-\textgreater{} Click on "Edit Metadata" above cell.)
 \item
-  They can be linked in markdown via
-  \texttt{\textbackslash{}cref\{fig:figNameFromMetadata\}}
+  Figures can be referenced via
+  \texttt{\textbackslash{}cref\{fig:figNameFromMetadata\}}. For example:
+  \cref{fig:example}
+\item
+  Here's the metadata for the figure below (so you don't have to inspect
+  it yourself):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+  \DataTypeTok{"ipub"}\FunctionTok{:} \FunctionTok{\{}
+\DataTypeTok{"figure"}\FunctionTok{:} \FunctionTok{\{}
+  \DataTypeTok{"caption"}\FunctionTok{:} \StringTok{"An example beeswarm plot of the built-in `tips` dataset found in seaborn."}\FunctionTok{,}
+  \DataTypeTok{"height"}\FunctionTok{:} \FloatTok{0.4}\FunctionTok{,}
+  \DataTypeTok{"label"}\FunctionTok{:} \StringTok{"fig:example"}\FunctionTok{,}
+  \DataTypeTok{"placement"}\FunctionTok{:} \StringTok{"H"}\FunctionTok{,}
+  \DataTypeTok{"widefigure"}\FunctionTok{:} \KeywordTok{false}
+\FunctionTok{\}}
+  \FunctionTok{\}}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
 \end{itemize}
 
-\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.4\paperheight}{template_files/output_10_0.pdf}\end{center}\caption{An example beeswarm plot of Seaborn's built-in 'tips' dataset.}\label{fig:example}
-    \end{figure}
+\subsection{Displaying Code}\label{displaying-code}
+
+Displaying the code in a code block, as in \cref{code:example_list_comp}
+can be accomplished by editing the metadata:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+\DataTypeTok{"ipub"}\FunctionTok{:} \FunctionTok{\{}
+  \DataTypeTok{"code"}\FunctionTok{:} \FunctionTok{\{}
+  \DataTypeTok{"format"} \FunctionTok{:} \FunctionTok{\{\},}
+    \DataTypeTok{"asfloat"}\FunctionTok{:} \KeywordTok{true}\FunctionTok{,}
+    \DataTypeTok{"caption"}\FunctionTok{:} \StringTok{"Example list comprehension."}\FunctionTok{,}
+    \DataTypeTok{"label"}\FunctionTok{:} \StringTok{"code:example_list_comp"}\FunctionTok{,}
+    \DataTypeTok{"widefigure"}\FunctionTok{:} \KeywordTok{false}\FunctionTok{,}
+    \DataTypeTok{"placement"}\FunctionTok{:} \StringTok{"H"}
+    \FunctionTok{\}}
+  \FunctionTok{\}}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{codecell}[H]
+
+    \caption{Example list comprehension}\label{code:example_list_comp}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+colors = ["red", "green", "blue"]
+for color in colors:
+    print(color)
+\end{lstlisting}\end{codecell}
 
 \subsection{Templating --- Pass Variables into
 Markdown}\label{templating-pass-variables-into-markdown}
@@ -614,8 +680,11 @@ Markdown}\label{templating-pass-variables-into-markdown}
 \begin{itemize}
 \tightlist
 \item
-  Pipe valid Python code into markdown directly by sandwiching it
-  between two curly braces: E.g., 2 + 2 = 4
+  Using the
+  \href{https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html}{Python
+  Markdown Extension}, you can pipe valid Python code into markdown
+  cells directly by sandwiching it between two curly braces: E.g., 2 + 2
+  = 4
 \item
   Note that the notebook needs to be \texttt{Trusted}; look to the top
   right to see if it is and simply click on \texttt{Not\ Trusted} to
@@ -645,15 +714,33 @@ Markdown}\label{templating-pass-variables-into-markdown}
   Execute terminal commands in Jupyter by prefacing code with \texttt{!}
   .
 \item
-  For example, you can export this notebook with the following code
-  cell:
+  For example, you can export this notebook with the following code cell
+  (uncommented, of course):
 \end{itemize}
 
 \begin{codecell}[H]
 
     \caption{How to publish this notebook, from within the notebook itself!}\label{code:publish}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
-!nbpublish -pdf -pbug template.ipynb
+# !nbpublish -pdf -pbug template.ipynb
 \end{lstlisting}\end{codecell}
+
+\subsection{Troubleshooting}\label{troubleshooting}
+
+\subsubsection{Jupytext}\label{jupytext}
+
+\begin{itemize}
+\tightlist
+\item
+  If saving to \texttt{Rmd} format, beware using single quotes within
+  figure caption metadata, since R Markdown uses single quotes for
+  metadata and not double quotes, which creates issues when you want to
+  include apostrophes.
+\item
+  If you are encountering problems opening or even "trusting" a notebook
+  that was previously working fine, simply delete the other non-ipynb
+  representations of the notebook. I encounter this issue most often
+  when synchronizing notebook files via Dropbox.
+\end{itemize}
 
 % sort citations by order of first appearance
 \bibliographystyle{apacite} % formerly unsrtnat with natbib

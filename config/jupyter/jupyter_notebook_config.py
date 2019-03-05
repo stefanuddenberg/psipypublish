@@ -93,7 +93,7 @@ c.Exporter.preprocessors = ["pre_pymarkdown.PyMarkdownPreprocessor"]
 c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManager"
 
 # Always pair ipynb notebooks to md files
-c.ContentsManager.default_jupytext_formats = "ipynb,md,py"
+c.ContentsManager.default_jupytext_formats = "ipynb,Rmd,py"
 
 # Use the percent format when saving as py
 c.ContentsManager.preferred_jupytext_formats_save = "py:percent"
