@@ -189,8 +189,19 @@ Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_n
 }
 ```
 
-```{python ipub={'figure': {'caption': 'An example beeswarm plot of the built-in `tips` dataset found in seaborn', 'height': 0.3, 'label': 'fig:example', 'placement': 'H', 'widefigure': False}}}
+
+### Pre-made SVG
+
+```{python ipub={'figure': {'caption': 'An example beeswarm plot of the built-in `tips` dataset found in seaborn.', 'height': 0.3, 'label': 'fig:example', 'placement': 'H', 'widefigure': False}}}
 display(SVG("figures/example.svg"))
+```
+
+### Inline plots (made with code)
+
+```{python ipub={'figure': {'caption': 'An example pair plot using the built-in `iris` dataset found in seaborn.', 'height': 0.3, 'label': 'fig:pairplot', 'placement': 'H', 'widefigure': False}}}
+sns.set_style("ticks")
+iris = sns.load_dataset("iris")
+sns.pairplot(iris, hue='species', height=2.5);
 ```
 
 ## Displaying Code

@@ -490,11 +490,16 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmtt.fd
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmtt.fd
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/tctt1000.tfm
-INPUT ./template_files/output_10_0.pdf
-INPUT ./template_files/output_10_0.pdf
-INPUT ./template_files/output_10_0.pdf
-INPUT ./template_files/output_10_0.pdf
-INPUT ./template_files/output_10_0.pdf
+INPUT ./template_files/output_11_0.pdf
+INPUT ./template_files/output_11_0.pdf
+INPUT ./template_files/output_11_0.pdf
+INPUT ./template_files/output_11_0.pdf
+INPUT ./template_files/output_11_0.pdf
+INPUT ./template_files/output_13_0.pdf
+INPUT ./template_files/output_13_0.pdf
+INPUT ./template_files/output_13_0.pdf
+INPUT ./template_files/output_13_0.pdf
+INPUT ./template_files/output_13_0.pdf
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8t.tfm

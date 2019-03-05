@@ -190,8 +190,19 @@ from ipypublish.scripts.ipynb_latex_setup import *
 # }
 # ```
 
-# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn", "height": 0.3, "label": "fig:example", "placement": "H", "widefigure": false}}}
+# %% [markdown]
+# ### Pre-made SVG
+
+# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn.", "height": 0.3, "label": "fig:example", "placement": "H", "widefigure": false}}}
 display(SVG("figures/example.svg"))
+
+# %% [markdown]
+# ### Inline plots (made with code)
+
+# %% {"ipub": {"figure": {"caption": "An example pair plot using the built-in `iris` dataset found in seaborn.", "height": 0.3, "label": "fig:pairplot", "placement": "H", "widefigure": false}}}
+sns.set_style("ticks")
+iris = sns.load_dataset("iris")
+sns.pairplot(iris, hue='species', height=2.5);
 
 # %% [markdown]
 # ## Displaying Code
