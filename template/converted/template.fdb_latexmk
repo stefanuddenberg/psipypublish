@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex template"] 1551774372 "template.aux" "template.bbl" "template" 1551774376
+["bibtex template"] 1551774521 "template.aux" "template.bbl" "template" 1551774699
   "C:/Program Files/MiKTeX 2.9/bibtex/bst/apacite/apacite.bst" 1374949128 146156 9d7b79dbf9d91133318126032cff8c27 ""
-  "template.aux" 1551774376 5616 a77a7c8dccf89d29679e49a009fda8c4 ""
+  "template.aux" 1551774698 5989 4cd86881e211ec9010624d59d4ba4a4f ""
   "template_files/ExampleBib.bib" 1548924302 2276 188fd6bbade0c05ae296ddc8b58d9057 ""
   (generated)
   "template.bbl"
   "template.blg"
-["pdflatex"] 1551774373 "D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex" "template.pdf" "template" 1551774376
+["pdflatex"] 1551774696 "D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex" "template.pdf" "template" 1551774699
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458470287 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1001771820 2971 def0b6c1f0b107b3b936def894055589 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001771820 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -250,16 +250,17 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
   "C:/Users/sdu2/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1540947975 4153039 0423a9c19c034855c0d3f1c8a9c62321 ""
   "C:/Users/sdu2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1544784696 277529 b829a27d101bcd6697dd76d49a592c7d ""
-  "D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex" 1551774369 32940 3256f5a0cd6042599a8dfd0c8fb03577 ""
-  "template.aux" 1551774376 5616 a77a7c8dccf89d29679e49a009fda8c4 ""
-  "template.bbl" 1551774373 891 e9d61afdee538c16586890a0370b827f "bibtex template"
-  "template.out" 1551774376 924 7a004a2598bcd32a50b94ac27b144dca ""
-  "template.tex" 1551774369 32940 3256f5a0cd6042599a8dfd0c8fb03577 ""
-  "template.toc" 1551774376 1169 feb3251d3c765158abdceff98fdd3254 ""
-  "template_files/princeton_logo.pdf" 1551774369 100230 9a4f6980cdba41ea3fe27e5b89b44e59 ""
+  "D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex" 1551774695 33344 17b2c3a5817b7ca1d6b2244367308e95 ""
+  "template.aux" 1551774698 5989 4cd86881e211ec9010624d59d4ba4a4f ""
+  "template.bbl" 1551774521 891 e9d61afdee538c16586890a0370b827f "bibtex template"
+  "template.out" 1551774698 924 7a004a2598bcd32a50b94ac27b144dca ""
+  "template.tex" 1551774695 33344 17b2c3a5817b7ca1d6b2244367308e95 ""
+  "template.toc" 1551774698 1169 12187b842228f98c87747b4742959b80 ""
+  "template_files/output_10_0.pdf" 1551774695 147163 8c02aa60e8f2e81fe01f8d09ae95cead ""
+  "template_files/princeton_logo.pdf" 1551774695 100230 9a4f6980cdba41ea3fe27e5b89b44e59 ""
   (generated)
   "template.toc"
-  "template.log"
   "template.pdf"
-  "template.aux"
   "template.out"
+  "template.log"
+  "template.aux"

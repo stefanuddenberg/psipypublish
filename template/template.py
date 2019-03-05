@@ -175,22 +175,22 @@ from ipypublish.scripts.ipynb_latex_setup import *
 # - Figures can be displayed with commands like `display(SVG("filename.svg"))` or `Image('filename.jpg', height=400)`.
 # - Edit the cell's metadata to change the figure caption, placement, size, et al. (View --> Cell Toolbar --> Edit Metadata --> Click on "Edit Metadata" above cell.)
 # - Figures can be referenced via `\cref{fig:figNameFromMetadata}`. For example: \cref{fig:example}
-# - Here's the metadata for the figure below (so you don't have to inspect it yourself):
+# - Here's the metadata for the figure below, so you don't have to inspect it yourself — but be wary that multiply nested curly braces don't show up correctly in the PDF output:
 # ```json
 # {
-#   "ipub": {
-#     "figure": {
-#       "caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn.",
-#       "height": 0.4,
-#       "label": "fig:example",
-#       "placement": "H",
-#       "widefigure": false
-#     }
-#   }
+# 	"ipub": {
+# 		"figure": {
+# 			"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn.",
+# 			"height": 0.3,
+# 			"label": "fig:example",
+# 			"placement": "H",
+# 			"widefigure": false
+# 		}
+# 	}
 # }
 # ```
 
-# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn", "height": 0.4, "label": "fig:example", "placement": "H", "widefigure": false}}}
+# %% {"ipub": {"figure": {"caption": "An example beeswarm plot of the built-in `tips` dataset found in seaborn", "height": 0.3, "label": "fig:example", "placement": "H", "widefigure": false}}}
 display(SVG("figures/example.svg"))
 
 # %% [markdown]

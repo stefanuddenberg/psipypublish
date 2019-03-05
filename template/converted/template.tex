@@ -624,25 +624,29 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
   \texttt{\textbackslash{}cref\{fig:figNameFromMetadata\}}. For example:
   \cref{fig:example}
 \item
-  Here's the metadata for the figure below (so you don't have to inspect
-  it yourself):
+  Here's the metadata for the figure below, so you don't have to inspect
+  it yourself --- but be wary that multiply nested curly braces don't
+  show up correctly in the PDF output:
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{\{}
-  \DataTypeTok{"ipub"}\FunctionTok{:} \FunctionTok{\{}
-\DataTypeTok{"figure"}\FunctionTok{:} \FunctionTok{\{}
-  \DataTypeTok{"caption"}\FunctionTok{:} \StringTok{"An example beeswarm plot of the built-in `tips` dataset found in seaborn."}\FunctionTok{,}
-  \DataTypeTok{"height"}\FunctionTok{:} \FloatTok{0.4}\FunctionTok{,}
-  \DataTypeTok{"label"}\FunctionTok{:} \StringTok{"fig:example"}\FunctionTok{,}
-  \DataTypeTok{"placement"}\FunctionTok{:} \StringTok{"H"}\FunctionTok{,}
-  \DataTypeTok{"widefigure"}\FunctionTok{:} \KeywordTok{false}
+\DataTypeTok{"ipub"}\FunctionTok{:} \FunctionTok{\{}
+    \DataTypeTok{"figure"}\FunctionTok{:} \FunctionTok{\{}
+        \DataTypeTok{"caption"}\FunctionTok{:} \StringTok{"An example beeswarm plot of the built-in `tips` dataset found in seaborn."}\FunctionTok{,}
+        \DataTypeTok{"height"}\FunctionTok{:} \FloatTok{0.3}\FunctionTok{,}
+        \DataTypeTok{"label"}\FunctionTok{:} \StringTok{"fig:example"}\FunctionTok{,}
+        \DataTypeTok{"placement"}\FunctionTok{:} \StringTok{"H"}\FunctionTok{,}
+        \DataTypeTok{"widefigure"}\FunctionTok{:} \KeywordTok{false}
+    \FunctionTok{\}}
 \FunctionTok{\}}
-  \FunctionTok{\}}
 \FunctionTok{\}}
 \end{Highlighting}
 \end{Shaded}
 \end{itemize}
+
+\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.3\paperheight}{template_files/output_10_0.pdf}\end{center}\caption{An example beeswarm plot of the built-in `tips` dataset found in seaborn}\label{fig:example}
+    \end{figure}
 
 \subsection{Displaying Code}\label{displaying-code}
 

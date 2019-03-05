@@ -490,18 +490,23 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmtt.fd
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmtt.fd
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/tctt1000.tfm
+INPUT ./template_files/output_10_0.pdf
+INPUT ./template_files/output_10_0.pdf
+INPUT ./template_files/output_10_0.pdf
+INPUT ./template_files/output_10_0.pdf
+INPUT ./template_files/output_10_0.pdf
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/palatino/pplr8r.tfm
-INPUT template.bbl
-INPUT template.bbl
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmmi10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/public/mathpazo/zplmr7t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT template.bbl
+INPUT template.bbl
 INPUT template.aux
 INPUT ./template.out
 INPUT ./template.out
