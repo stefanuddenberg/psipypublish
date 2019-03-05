@@ -457,7 +457,7 @@ includehead,includefoot,footskip=25pt} % use nohead if... well... no heading
 
 \section{Introduction}\label{introduction}
 
-This is a template for an APA-style
+This is a template for an (approximately) APA-style
 \href{https://github.com/chrisjsewell/ipypublish}{iPyPublish}
 manuscript. Feel free to check out the documentation and examples at
 that link; it's all very good. There you can find information on how to
@@ -485,13 +485,13 @@ installation can be found at
 \item
   \texttt{biblio\_natbib.py}, \texttt{doc\_article.py}, and
   \texttt{front\_pages.py} all live in
-  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}latex\textbackslash{}ipypublish}
+  \texttt{ipypublish\textbackslash{}latex\textbackslash{}ipypublish}
 \item
   \texttt{ipynb\_latex\_setup.py} lives in
-  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}scripts}
+  \texttt{ipypublish\textbackslash{}scripts}
 \item
   \texttt{latex\_ipypublish\_main.py} lives in
-  \texttt{your\_environment\_name\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}ipypublish\textbackslash{}export\_plugins}
+  \texttt{ipypublish\textbackslash{}export\_plugins}
 \end{itemize}
 
 \subsection{Caveats}\label{caveats}
@@ -571,14 +571,19 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
   left of the \texttt{1} key at the top of your keyboard).
 
   \begin{itemize}
-  \tightlist
   \item
     Place it between 3 backticks (with an optional language name) and
     you get (syntax-highlighted) block code.\footnote{\hphantom{} Note,
       however, that one should not use this for displaying large chunks
       of code in an nbpublish PDF. Instead, see code cell
-      \cref{code:publish} below for an example of how to place code in
-      the PDF} \texttt{python\ print(foo)}
+      \cref{code:example_list_comp} below for an example of how to place
+      code in the PDF}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(foo)}
+\end{Highlighting}
+\end{Shaded}
   \end{itemize}
 \item
   \emph{Italic}, \textbf{bold}, and \textbf{\emph{bolded italic}} text
@@ -672,12 +677,6 @@ Markdown}\label{templating-pass-variables-into-markdown}
   (uncommented, of course):
 \end{itemize}
 
-\begin{codecell}[H]
-
-    \caption{How to publish this notebook, from within the notebook itself!}\label{code:publish}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
-# !nbpublish -pdf -pbug template.ipynb
-\end{lstlisting}\end{codecell}
-
 \subsection{Figures}\label{figures}
 
 \begin{itemize}
@@ -739,9 +738,9 @@ code)}\label{inline-plots-made-with-code}
 \toprule
 {} &         a &  b &      c &      d \\
 \midrule
-0 &  $\delta$ &  l &  0.721 &  0.343 \\
-1 &         x &  m &  0.910 &  0.712 \\
-2 &         y &  n &  0.439 &  0.512 \\
+0 &  $\delta$ &  l &  0.945 &  0.493 \\
+1 &         x &  m &  0.014 &  0.313 \\
+2 &         y &  n &  0.078 &  0.244 \\
 \bottomrule
 \end{tabular}
 

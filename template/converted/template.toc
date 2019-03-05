@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {2.6}Terminal commands}{5}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Figures}{5}{subsection.2.7}
 \contentsline {subsubsection}{\numberline {2.7.1}Pre-made SVG}{6}{subsubsection.2.7.1}
-\contentsline {subsubsection}{\numberline {2.7.2}Inline plots (made with code)}{7}{subsubsection.2.7.2}
+\contentsline {subsubsection}{\numberline {2.7.2}Inline plots (made with code)}{6}{subsubsection.2.7.2}
 \contentsline {subsection}{\numberline {2.8}Tables}{7}{subsection.2.8}
 \contentsline {subsection}{\numberline {2.9}Displaying Code}{7}{subsection.2.9}
-\contentsline {section}{\numberline {3}References}{9}{section.3}
+\contentsline {section}{\numberline {3}References}{8}{section.3}
