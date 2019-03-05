@@ -503,6 +503,24 @@ I update this guide to deal with the latest version --- if any changes
 are even needed at all, since I haven't had a chance to try out the
 latest edition.
 
+\subsection{Troubleshooting}\label{troubleshooting}
+
+\subsubsection{Jupytext}\label{jupytext}
+
+\begin{itemize}
+\tightlist
+\item
+  If saving to \texttt{Rmd} format, beware using single quotes within
+  figure caption metadata, since R Markdown uses single quotes for
+  metadata and not double quotes, which creates issues when you want to
+  include apostrophes.
+\item
+  If you are encountering problems opening or even "trusting" a notebook
+  that was previously working fine, simply delete the other non-ipynb
+  representations of the notebook. I encounter this issue most often
+  when synchronizing notebook files via Dropbox.
+\end{itemize}
+
 \section{Notes}\label{notes}
 
 \subsection{Production}\label{production}
@@ -572,7 +590,40 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
   \end{quote}
 \end{itemize}
 
-\todo[inline]{Get inline todos with Latex's "todo" command.}
+\todo[inline]{Get inline todos with  \LaTeX's "todo" command.}
+
+\subsection{Templating --- Pass Variables into
+Markdown}\label{templating-pass-variables-into-markdown}
+
+\begin{itemize}
+\tightlist
+\item
+  Using the
+  \href{https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html}{Python
+  Markdown Extension}, you can pipe valid Python code into markdown
+  cells directly by sandwiching it between two curly braces: E.g., 2 + 2
+  = 4. (You should see \texttt{2\ +\ 2\ =\ 4} in the PDF output, despite
+  the fact that I never typed out \texttt{4} at all.)
+\item
+  Note that the notebook needs to be \texttt{Trusted}; look to the top
+  right to see if it is and simply click on \texttt{Not\ Trusted} to
+  change that.
+\end{itemize}
+
+\subsection{Latex}\label{latex}
+
+\begin{itemize}
+\tightlist
+\item
+  Execute arbitrary \LaTeX \hphantom{} by sandwiching it between dollar
+  signs: \(a = b+c\)
+\item
+  Alternatively, use \texttt{Latex()} command from \texttt{ipypublish}
+  within a code cell.
+\item
+  \LaTeX's \texttt{hphantom} command is useful when you just want a
+  little more horizontal space between items.
+\end{itemize}
 
 \subsection{Citations and References}\label{citations-and-references}
 
@@ -596,8 +647,9 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
     easy.
   \end{itemize}
 \item
-  Citations can be input with citation keys and standard latex commands
-  (e.g., \texttt{\textbackslash{}cite\{citationKey\}}).
+  Citations can be input with citation keys and standard
+  \LaTeX \hphantom{} commands (e.g.,
+  \texttt{\textbackslash{}cite\{citationKey\}}).
 \item
   I've had success with citation keys generated via Zotero Better
   BibTex, like so \citep{uddenbergTelefaceSerialReproduction2018}. Note
@@ -607,6 +659,24 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
   See a \href{http://merkel.texture.rocks/Latex/natbib.php}{cheat sheet
   of valid cite commands here}.
 \end{itemize}
+
+\subsection{Terminal commands}\label{terminal-commands}
+
+\begin{itemize}
+\tightlist
+\item
+  Execute terminal commands in Jupyter by prefacing code with \texttt{!}
+  .
+\item
+  For example, you can export this notebook with the following code cell
+  (uncommented, of course):
+\end{itemize}
+
+\begin{codecell}[H]
+
+    \caption{How to publish this notebook, from within the notebook itself!}\label{code:publish}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+# !nbpublish -pdf -pbug template.ipynb
+\end{lstlisting}\end{codecell}
 
 \subsection{Figures}\label{figures}
 
@@ -647,13 +717,13 @@ location.\footnote{\hphantom{} \texttt{nbpublish} requires a lot of
 
 \subsubsection{Pre-made SVG}\label{pre-made-svg}
 
-\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.3\paperheight}{template_files/output_11_0.pdf}\end{center}\caption{An example beeswarm plot of the built-in `tips` dataset found in seaborn.}\label{fig:example}
+\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.3\paperheight}{template_files/output_16_0.pdf}\end{center}\caption{An example beeswarm plot of the built-in `tips` dataset found in seaborn.}\label{fig:example}
     \end{figure}
 
 \subsubsection{Inline plots (made with
 code)}\label{inline-plots-made-with-code}
 
-\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.3\paperheight}{template_files/output_13_0.pdf}\end{center}\caption{An example pair plot using the built-in `iris` dataset found in seaborn.}\label{fig:pairplot}
+\begin{figure}[H]\begin{center}\adjustimage{max size={0.9\linewidth}{0.9\paperheight},height=0.3\paperheight}{template_files/output_18_0.pdf}\end{center}\caption{An example pair plot using the built-in `iris` dataset found in seaborn.}\label{fig:pairplot}
     \end{figure}
 
 \subsection{Tables}\label{tables}
@@ -669,9 +739,9 @@ code)}\label{inline-plots-made-with-code}
 \toprule
 {} &         a &  b &      c &      d \\
 \midrule
-0 &  $\delta$ &  l &  0.401 &  0.521 \\
-1 &         x &  m &  0.769 &  0.263 \\
-2 &         y &  n &  0.832 &  0.753 \\
+0 &  $\delta$ &  l &  0.721 &  0.343 \\
+1 &         x &  m &  0.910 &  0.712 \\
+2 &         y &  n &  0.439 &  0.512 \\
 \bottomrule
 \end{tabular}
 
@@ -707,75 +777,6 @@ colors = ["red", "green", "blue"]
 for color in colors:
     print(color)
 \end{lstlisting}\end{codecell}
-
-\subsection{Templating --- Pass Variables into
-Markdown}\label{templating-pass-variables-into-markdown}
-
-\begin{itemize}
-\tightlist
-\item
-  Using the
-  \href{https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html}{Python
-  Markdown Extension}, you can pipe valid Python code into markdown
-  cells directly by sandwiching it between two curly braces: E.g., 2 + 2
-  = 4. (You should see \texttt{2\ +\ 2\ =\ 4} in the PDF output, despite
-  the fact that I never typed out \texttt{4} at all.)
-\item
-  Note that the notebook needs to be \texttt{Trusted}; look to the top
-  right to see if it is and simply click on \texttt{Not\ Trusted} to
-  change that.
-\end{itemize}
-
-\subsection{Latex}\label{latex}
-
-\begin{itemize}
-\tightlist
-\item
-  Execute arbitrary latex by sandwiching it between dollar signs:
-  \(a = b+c\)
-\item
-  Alternatively, use \texttt{Latex()} command from \texttt{ipypublish}
-  within a code cell.
-\item
-  Latex's \texttt{hphantom} command is useful when you just want a
-  little more horizontal space between items.
-\end{itemize}
-
-\subsection{Terminal commands}\label{terminal-commands}
-
-\begin{itemize}
-\tightlist
-\item
-  Execute terminal commands in Jupyter by prefacing code with \texttt{!}
-  .
-\item
-  For example, you can export this notebook with the following code cell
-  (uncommented, of course):
-\end{itemize}
-
-\begin{codecell}[H]
-
-    \caption{How to publish this notebook, from within the notebook itself!}\label{code:publish}\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
-# !nbpublish -pdf -pbug template.ipynb
-\end{lstlisting}\end{codecell}
-
-\subsection{Troubleshooting}\label{troubleshooting}
-
-\subsubsection{Jupytext}\label{jupytext}
-
-\begin{itemize}
-\tightlist
-\item
-  If saving to \texttt{Rmd} format, beware using single quotes within
-  figure caption metadata, since R Markdown uses single quotes for
-  metadata and not double quotes, which creates issues when you want to
-  include apostrophes.
-\item
-  If you are encountering problems opening or even "trusting" a notebook
-  that was previously working fine, simply delete the other non-ipynb
-  representations of the notebook. I encounter this issue most often
-  when synchronizing notebook files via Dropbox.
-\end{itemize}
 
 % sort citations by order of first appearance
 \bibliographystyle{apacite} % formerly unsrtnat with natbib

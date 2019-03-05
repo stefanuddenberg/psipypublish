@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  5 MAR 2019 03:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  5 MAR 2019 04:06
 entering extended mode
 **"D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex
 "
@@ -1720,28 +1720,43 @@ tt/m/n/10 your_environment_name\Lib\site-packages\ipypublish\export_plugins
 
 ]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 513.
+(Font)              scaled to size 8.33606pt on input line 531.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 513.
+(Font)              scaled to size 5.21004pt on input line 531.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 513.
+(Font)              scaled to size 8.33606pt on input line 531.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 513.
+(Font)              scaled to size 5.21004pt on input line 531.
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 566.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 584.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 575.
+ine 593.
 
-Overfull \hbox (9.49997pt too wide) in paragraph at lines 575--575
+Overfull \hbox (9.49997pt too wide) in paragraph at lines 593--593
 [] 
  []
 
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 617
+Underfull \hbox (badness 10000) in paragraph at lines 650--654
+[]\T1/ppl/m/n/10 (+20) Citations can be in-put with ci-ta-tion keys and stan-da
+rd L[]T[]X[] com-mands (e.g.,
+ []
+
+Package hyperref Info: bookmark level for unknown codecell defaults to 0 on inp
+ut line 677.
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 679.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 679.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 687
 .
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1749,66 +1764,51 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 615--619
+Underfull \hbox (badness 10000) in paragraph at lines 685--689
 []\T1/ppl/m/n/10 (+20) Figures can be dis-played with com-mands like \T1/cmtt/m
 /n/10 display(SVG("filename.svg")) \T1/ppl/m/n/10 (+20) or
  []
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 640.
-<template_files/output_11_0.pdf, id=180, 722.7pt x 578.16pt>
-File: template_files/output_11_0.pdf Graphic file (type pdf)
-<use template_files/output_11_0.pdf>
-Package pdftex.def Info: template_files/output_11_0.pdf  used on input line 650
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 710.
+[5]
+<template_files/output_16_0.pdf, id=191, 722.7pt x 578.16pt>
+File: template_files/output_16_0.pdf Graphic file (type pdf)
+<use template_files/output_16_0.pdf>
+Package pdftex.def Info: template_files/output_16_0.pdf  used on input line 720
 .
 (pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
-[5]
-<template_files/output_13_0.pdf, id=188, 819.78145pt x 714.01974pt>
-File: template_files/output_13_0.pdf Graphic file (type pdf)
-<use template_files/output_13_0.pdf>
-Package pdftex.def Info: template_files/output_13_0.pdf  used on input line 656
+<template_files/output_18_0.pdf, id=192, 819.78145pt x 714.01974pt>
+File: template_files/output_18_0.pdf Graphic file (type pdf)
+<use template_files/output_18_0.pdf>
+Package pdftex.def Info: template_files/output_18_0.pdf  used on input line 726
 .
 (pdftex.def)             Requested size: 819.77945pt x 714.018pt.
- [6 <./template_files/output_11_0.pdf> <./template_files/output_13_0.pdf
-
-pdfTeX warning: pdflatex (file ./template_files/output_13_0.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->]
-Package hyperref Info: bookmark level for unknown codecell defaults to 0 on inp
-ut line 705.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
+ [6 <./template_files/output_16_0.pdf>] [7 <./template_files/output_18_0.pdf>]
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 709.
+ mdframed uses option nobreak mdframed on input line 779.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 709.
- [7]
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 760.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 760.
-
-(template.bbl [8]) [9
+ mdframed uses option nobreak mdframed on input line 779.
+ (template.bbl [8]) [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 785.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 785.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 786.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 786.
  (template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 785.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 785.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 786.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 786.
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 324750E6B3C9804F137CA6278B9DB724;1149.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 785.
+(rerunfilecheck)             Checksum: 43B6FB7E1227699FB4AE47BB0C759CE8;1146.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 786.
  ) 
 Here is how much of TeX's memory you used:
- 42149 strings out of 492970
- 821257 string characters out of 3135857
- 1200079 words of memory out of 3000000
+ 42146 strings out of 492970
+ 821226 string characters out of 3135857
+ 1194989 words of memory out of 3000000
  45274 multiletter control sequences out of 15000+200000
- 581653 words of font info for 170 fonts, out of 3000000 for 9000
+ 581494 words of font info for 168 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,20n,84p,9153b,1672s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,19n,84p,9153b,1664s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -1821,9 +1821,9 @@ iKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8
 a.pfb>
-Output written on template.pdf (9 pages, 688887 bytes).
+Output written on template.pdf (9 pages, 688997 bytes).
 PDF statistics:
- 1195 PDF objects out of 1200 (max. 8388607)
+ 1196 PDF objects out of 1200 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  44812 words of extra memory for PDF output out of 51595 (max. 10000000)
 

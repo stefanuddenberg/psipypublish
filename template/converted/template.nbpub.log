@@ -1,4 +1,4 @@
-INFO:main:started ipypublish v0.6.7 at Tue Mar  5 03:52:05 2019
+INFO:main:started ipypublish v0.6.7 at Tue Mar  5 04:06:30 2019
 INFO:main:logging to: D:\Dropbox (Princeton)\Projects\psipypublish\template\converted\template.nbpub.log
 INFO:main:running for ipynb(s) at: template.ipynb
 INFO:main:with conversion: latex_ipypublish_main
@@ -281,18 +281,19 @@ INFO:pdfexport:latexmk: Overfull \hbox (73.51292pt too wide) in paragraph at lin
 INFO:pdfexport:latexmk: []\T1/cmtt/m/n/10 latex_ipypublish_main.py \T1/ppl/m/n/10 (-20) lives in \T1/cm
 INFO:pdfexport:latexmk: tt/m/n/10 your_environment_name\Lib\site-packages\ipypublish\export_plugins
 INFO:pdfexport:latexmk: [3]
-INFO:pdfexport:latexmk: Overfull \hbox (9.49997pt too wide) in paragraph at lines 575--575
+INFO:pdfexport:latexmk: Overfull \hbox (9.49997pt too wide) in paragraph at lines 593--593
 INFO:pdfexport:latexmk: []
-INFO:pdfexport:latexmk: [4] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd")
-INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 615--619
+INFO:pdfexport:latexmk: [4]
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 650--654
+INFO:pdfexport:latexmk: []\T1/ppl/m/n/10 (+20) Citations can be in-put with ci-ta-tion keys and stan-da
+INFO:pdfexport:latexmk: rd L[]T[]X[] com-mands (e.g.,
+INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty")
+INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd")
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 685--689
 INFO:pdfexport:latexmk: []\T1/ppl/m/n/10 (+20) Figures can be dis-played with com-mands like \T1/cmtt/m
 INFO:pdfexport:latexmk: /n/10 display(SVG("filename.svg")) \T1/ppl/m/n/10 (+20) or
-INFO:pdfexport:latexmk: [5] [6 <./template_files/output_11_0.pdf> <./template_files/output_13_0.pdf
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: pdfTeX warning: pdflatex (file ./template_files/output_13_0.pdf): PDF inclusion
-INFO:pdfexport:latexmk: : multiple pdfs with page group included in a single page
-INFO:pdfexport:latexmk: >] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty") [7]
-INFO:pdfexport:latexmk: (template.bbl [8]) [9] (template.aux) )
+INFO:pdfexport:latexmk: [5] [6 <./template_files/output_16_0.pdf>] [7 <./template_files/output_18_0.pdf
+INFO:pdfexport:latexmk: >] (template.bbl [8]) [9] (template.aux) )
 INFO:pdfexport:latexmk: (see the transcript file for additional information){C:/Program Files/MiKTeX 2.
 INFO:pdfexport:latexmk: 9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/
 INFO:pdfexport:latexmk: enc/dvips/cm-super/cm-super-t1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips
@@ -305,7 +306,7 @@ INFO:pdfexport:latexmk: /type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 
 INFO:pdfexport:latexmk: atino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.
 INFO:pdfexport:latexmk: pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Progra
 INFO:pdfexport:latexmk: m Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 688887 bytes).
+INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 688997 bytes).
 INFO:pdfexport:latexmk: Transcript written on template.log.
 INFO:pdfexport:latexmk: Latexmk: Found input bbl file 'template.bbl'
 INFO:pdfexport:latexmk: Latexmk: Log file says output to 'template.pdf'

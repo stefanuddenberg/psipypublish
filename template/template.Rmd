@@ -131,6 +131,13 @@ My working configuration files for Jupyter (with Jupytext) and iPyPublish can be
 Since the creation of this template, `ipypublish` has been upgraded to version 0.9.0. This template was designed to work with version 0.6.7, and suits my needs; as such, it may take some time before I update this guide to deal with the latest version — if any changes are even needed at all, since I haven't had a chance to try out the latest edition.
 
 
+## Troubleshooting
+
+### Jupytext
+- If saving to `Rmd` format, beware using single quotes within figure caption metadata, since R Markdown uses single quotes for metadata and not double quotes, which creates issues when you want to include apostrophes.
+- If you are encountering problems opening or even "trusting" a notebook that was previously working fine, simply delete the other non-ipynb representations of the notebook. I encounter this issue most often when synchronizing notebook files via Dropbox.
+
+
 # Notes
 
 
@@ -156,19 +163,40 @@ Produce a notebook in the terminal with the command `nbpublish -pdf -pbug file_n
 - *Italic*, __bold__, and ***bolded italic*** text can be created by sandwiching text between 1, 2, or 3 `*`s or `_`s respectively.
 - > Blockquotes are made by prefacing text with `>` .
 
-\todo[inline]{Get inline todos with Latex's "todo" command.}
+\todo[inline]{Get inline todos with  \LaTeX's "todo" command.}
 
 [^2]: \hphantom{} Footnote content goes here!  
 [^3]: \hphantom{} Note, however, that one should not use this for displaying large chunks of code in an nbpublish PDF. Instead, see code cell \cref{code:publish} below for an example of how to place code in the PDF
 
 
+## Templating — Pass Variables into Markdown
+- Using the [Python Markdown Extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), you can pipe valid Python code into markdown cells directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}. (You should see `2 + 2 = 4` in the PDF output, despite the fact that I never typed out `4` at all.)
+- Note that the notebook needs to be `Trusted`; look to the top right to see if it is and simply click on `Not Trusted` to change that.
+
+[^4]: \hphantom{} 
+
+
+## Latex
+- Execute arbitrary \LaTeX \hphantom{} by sandwiching it between dollar signs: $a = b+c$
+- Alternatively, use `Latex()` command from `ipypublish` within a code cell.
+- \LaTeX's `hphantom` command is useful when you just want a little more horizontal space between items.
+
+
 ## Citations and References
 - First, specify the `bibliography` entry in the notebook metadata to the correct bibliography file (Edit --> Edit Notebook Metadata). _Leave out the `.bib` extension from this file name!_ It should look like `path/to/bibFileName` .
     - If nbpublish is having problems finding the `.bib` file, I have had success by placing a copy in the `converted/notebook_name_files/` directory, as well as placing the file in the same folder as the actual notebook. This makes set up for the notebook's bibliography metadata especially easy.
-- Citations can be input with citation keys and standard latex commands (e.g., `\cite{citationKey}`).
+- Citations can be input with citation keys and standard \LaTeX \hphantom{} commands (e.g., `\cite{citationKey}`).
 - I've had success with citation keys generated via Zotero Better BibTex, like so \citep{uddenbergTelefaceSerialReproduction2018}. Note that you won't see the final formatted output until you run `nbpublish`.
 - See a [cheat sheet of valid cite commands here](http://merkel.texture.rocks/Latex/natbib.php).
 
+
+## Terminal commands
+- Execute terminal commands in Jupyter by prefacing code with `!` .
+- For example, you can export this notebook with the following code cell (uncommented, of course):
+
+```{python ipub={'code': {'asfloat': True, 'caption': 'How to publish this notebook, from within the notebook itself!', 'format': {}, 'label': 'code:publish', 'placement': 'H', 'widefigure': False}}}
+# !nbpublish -pdf -pbug template.ipynb
+```
 
 ## Figures
 - Figures can be displayed with commands like `display(SVG("filename.svg"))` or `Image('filename.jpg', height=400)`.
@@ -241,30 +269,3 @@ colors = ["red", "green", "blue"]
 for color in colors:
     print(color)
 ```
-
-## Templating — Pass Variables into Markdown
-- Using the [Python Markdown Extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), you can pipe valid Python code into markdown cells directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}. (You should see `2 + 2 = 4` in the PDF output, despite the fact that I never typed out `4` at all.)
-- Note that the notebook needs to be `Trusted`; look to the top right to see if it is and simply click on `Not Trusted` to change that.
-
-[^4]: \hphantom{} 
-
-
-## Latex
-- Execute arbitrary latex by sandwiching it between dollar signs: $a = b+c$
-- Alternatively, use `Latex()` command from `ipypublish` within a code cell.
-- Latex's `hphantom` command is useful when you just want a little more horizontal space between items.
-
-
-## Terminal commands
-- Execute terminal commands in Jupyter by prefacing code with `!` .
-- For example, you can export this notebook with the following code cell (uncommented, of course):
-
-```{python ipub={'code': {'asfloat': True, 'caption': 'How to publish this notebook, from within the notebook itself!', 'format': {}, 'label': 'code:publish', 'placement': 'H', 'widefigure': False}}}
-# !nbpublish -pdf -pbug template.ipynb
-```
-
-## Troubleshooting
-
-### Jupytext
-- If saving to `Rmd` format, beware using single quotes within figure caption metadata, since R Markdown uses single quotes for metadata and not double quotes, which creates issues when you want to include apostrophes.
-- If you are encountering problems opening or even "trusting" a notebook that was previously working fine, simply delete the other non-ipynb representations of the notebook. I encounter this issue most often when synchronizing notebook files via Dropbox.
