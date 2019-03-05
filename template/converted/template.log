@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  5 MAR 2019 03:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  5 MAR 2019 03:43
 entering extended mode
 **"D:/Dropbox (Princeton)/Projects/psipypublish/template/converted/template.tex
 "
@@ -1763,12 +1763,12 @@ Package pdftex.def Info: template_files/output_11_0.pdf  used on input line 650
 .
 (pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
 [5]
-<template_files/output_13_0.pdf, id=183, 819.79498pt x 714.01442pt>
+<template_files/output_13_0.pdf, id=183, 819.78145pt x 714.01974pt>
 File: template_files/output_13_0.pdf Graphic file (type pdf)
 <use template_files/output_13_0.pdf>
 Package pdftex.def Info: template_files/output_13_0.pdf  used on input line 656
 .
-(pdftex.def)             Requested size: 819.79298pt x 714.01268pt.
+(pdftex.def)             Requested size: 819.77945pt x 714.018pt.
  [6 <./template_files/output_11_0.pdf> <./template_files/output_13_0.pdf
 
 pdfTeX warning: pdflatex (file ./template_files/output_13_0.pdf): PDF inclusion
@@ -1784,21 +1784,21 @@ Package mdframed Info: mdframed inside float
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 687.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 737.
+ mdframed uses option nobreak mdframed on input line 738.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 737.
+ mdframed uses option nobreak mdframed on input line 738.
  [7]
 (template.bbl [8]) [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 763.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 763.
  (template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 763.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 763.
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: A248A9F6A45CABD7222264D758B1FBA0;1089.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 762.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 763.
  ) 
 Here is how much of TeX's memory you used:
  42138 strings out of 492970
@@ -1819,9 +1819,9 @@ ram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on template.pdf (9 pages, 483380 bytes).
+Output written on template.pdf (9 pages, 684439 bytes).
 PDF statistics:
- 1072 PDF objects out of 1200 (max. 8388607)
+ 1185 PDF objects out of 1200 (max. 8388607)
  46 named destinations out of 1000 (max. 500000)
  44804 words of extra memory for PDF output out of 51595 (max. 10000000)
 

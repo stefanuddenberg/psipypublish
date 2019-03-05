@@ -1,4 +1,4 @@
-INFO:main:started ipypublish v0.6.7 at Tue Mar  5 03:35:46 2019
+INFO:main:started ipypublish v0.6.7 at Tue Mar  5 03:42:55 2019
 INFO:main:logging to: D:\Dropbox (Princeton)\Projects\psipypublish\template\converted\template.nbpub.log
 INFO:main:running for ipynb(s) at: template.ipynb
 INFO:main:with conversion: latex_ipypublish_main
@@ -239,14 +239,8 @@ INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\needspace\needsp
 INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\mdframed\md-frame-1.mdf"))
 INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\cleveref\cleveref.sty") (template.aux
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: LaTeX Warning: Label `fig:example' multiply defined.
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: LaTeX Warning: Label `fig:example@cref' multiply defined.
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd")
+INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\cleveref\cleveref.sty") (template.aux)
+INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd")
 INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd")
 INFO:pdfexport:latexmk: ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 INFO:pdfexport:latexmk: [Loading MPS to PDF converter (version 2006.09.02).]
@@ -301,12 +295,7 @@ INFO:pdfexport:latexmk: : multiple pdfs with page group included in a single pag
 INFO:pdfexport:latexmk: >] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty") [7]
 INFO:pdfexport:latexmk: (template.bbl [8]) [9] (template.aux)
 INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: Package rerunfilecheck Warning: File `template.out' has changed.
-INFO:pdfexport:latexmk: (rerunfilecheck)                Rerun to get outlines right
-INFO:pdfexport:latexmk: (rerunfilecheck)                or use package `bookmark'.
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: 
-INFO:pdfexport:latexmk: LaTeX Warning: There were multiply-defined labels.
+INFO:pdfexport:latexmk: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 INFO:pdfexport:latexmk: 
 INFO:pdfexport:latexmk: )
 INFO:pdfexport:latexmk: (see the transcript file for additional information){C:/Program Files/MiKTeX 2.
@@ -320,14 +309,11 @@ INFO:pdfexport:latexmk: X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Fi
 INFO:pdfexport:latexmk: pe1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palat
 INFO:pdfexport:latexmk: ino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 INFO:pdfexport:latexmk: ><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 483345 bytes).
+INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 684439 bytes).
 INFO:pdfexport:latexmk: Transcript written on template.log.
 INFO:pdfexport:latexmk: Latexmk: Found input bbl file 'template.bbl'
 INFO:pdfexport:latexmk: Latexmk: References changed.
 INFO:pdfexport:latexmk: Latexmk: Log file says output to 'template.pdf'
-INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
-INFO:pdfexport:latexmk: Label `fig:example' multiply defined
-INFO:pdfexport:latexmk: Label `fig:example@cref' multiply defined
 INFO:pdfexport:latexmk: === TeX engine is 'pdfTeX'
 INFO:pdfexport:latexmk: Latexmk: Found bibliography file(s) [template_files/ExampleBib.bib]
 INFO:pdfexport:latexmk: Rule 'bibtex template': File changes, etc:
@@ -349,8 +335,6 @@ INFO:pdfexport:latexmk: apacite.bst [2013/07/21 v6.03 APA bibliography style]
 INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
 INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
 INFO:pdfexport:latexmk: 'template.aux'
-INFO:pdfexport:latexmk: 'template.out'
-INFO:pdfexport:latexmk: 'template.toc'
 INFO:pdfexport:latexmk: ------------
 INFO:pdfexport:latexmk: Run number 2 of rule 'pdflatex'
 INFO:pdfexport:latexmk: ------------
@@ -637,7 +621,7 @@ INFO:pdfexport:latexmk: X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Fi
 INFO:pdfexport:latexmk: pe1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palat
 INFO:pdfexport:latexmk: ino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 INFO:pdfexport:latexmk: ><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 483380 bytes).
+INFO:pdfexport:latexmk: Output written on template.pdf (9 pages, 684439 bytes).
 INFO:pdfexport:latexmk: Transcript written on template.log.
 INFO:pdfexport:latexmk: Latexmk: Found input bbl file 'template.bbl'
 INFO:pdfexport:latexmk: Latexmk: Log file says output to 'template.pdf'

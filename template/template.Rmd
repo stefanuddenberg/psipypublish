@@ -231,8 +231,10 @@ for color in colors:
 ```
 
 ## Templating — Pass Variables into Markdown
-- Using the [Python Markdown Extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), you can pipe valid Python code into markdown cells directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}
+- Using the [Python Markdown Extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), you can pipe valid Python code into markdown cells directly by sandwiching it between two curly braces: E.g., 2 + 2 = {{str(2 + 2)}}. (You should see `2 + 2 = 4` in the PDF output, despite the fact that I never typed out `4` at all.)
 - Note that the notebook needs to be `Trusted`; look to the top right to see if it is and simply click on `Not Trusted` to change that.
+
+[^4]: \hphantom{} 
 
 
 ## Latex
