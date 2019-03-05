@@ -204,6 +204,18 @@ iris = sns.load_dataset("iris")
 sns.pairplot(iris, hue='species', height=2.5);
 ```
 
+## Tables
+`pandas` tables can be displayed by casting them to their \LaTeX representation. 
+
+```{python ipub={'table': {'caption': 'An example table.', 'label': 'tbl:exampleTable', 'placement': 'H', 'alternate': 'gray!20'}}}
+df = pd.DataFrame(np.random.rand(3,4),columns=['a','b','c','d'])
+df.a = ['$\delta$','x','y']
+df.b = ['l','m','n']
+df.set_index(['a','b'])
+df = df.round(3)
+Latex(df.to_latex())
+```
+
 ## Displaying Code
 
 
